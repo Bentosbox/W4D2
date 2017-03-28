@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
       table.string('description');
       table.date('date_achieved');
       table.increments('id').primary();
+      table.integer('famous_person_id');
     })
   ])
 };

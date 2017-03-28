@@ -21,7 +21,9 @@ client.connect((err) => {
     }
     console.log('Searching ...');
     console.log('Found ' + result.rows.length + ' person(s) by the last name ' + input)
-    console.log(result.rows[0].first_name + ' ' + result.rows[0].last_name + ' Born: ' + result.rows[0].birthdate); //output: 1
+    for (var i = 0; i < result.rows.length; i++) {
+      console.log(i + ' ' + result.rows[i].first_name + ' ' + result.rows[i].last_name + ' Born: ' + result.rows[i].birthdate)
+    }
     client.end();
   });
 });
